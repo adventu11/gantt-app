@@ -1,0 +1,26 @@
+甘特图 · 手机版 / 云同步 设置步骤
+
+一、放到网上（供 iPhone 打开）
+1. 在 GitHub 新建一个「公开」仓库，例如 gantt-app（这里只放程序，不放任何项目数据）。
+2. 把本文件夹里的全部文件上传到这个仓库根目录（Add file → Upload files）。
+3. 仓库 Settings → Pages → Branch 选 main、文件夹选 /(root) → Save。
+   约 1 分钟后得到网址：https://你的用户名.github.io/gantt-app/
+
+二、准备数据仓库和令牌
+4. 新建一个「私有」仓库，例如 gantt-data（勾选 Add a README file）。
+5. 头像 → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token：
+   - Repository access：Only select repositories → 选 gantt-data
+   - Permissions → Repository permissions → Contents：Read and write
+   - 有效期选长一些（到期后重新生成，填进软件即可）
+   生成后复制令牌（只显示一次）。
+
+三、电脑上
+6. 打开甘特图（本地 html 或上面的网址都可以）→ ☁ 云同步 → 填 GitHub 用户名、gantt-data、令牌 → 测试并保存。
+7. 打开你的项目 → ☁ 云同步 → 上传当前项目到云端。
+8. ☁ 云同步 → 复制同步设置，用 AirDrop 或备忘录发到手机。
+
+四、iPhone 上
+9. Safari 打开 https://你的用户名.github.io/gantt-app/ → 分享 → 添加到主屏幕。
+10. 从主屏幕打开 → ☰ 菜单 → ☁ 云同步 → 粘贴同步设置代码 → 测试并保存 → 从云端打开项目。
+
+之后两边修改都会自动同步：修改后约 3 秒上传，切回页面时自动取回另一台设备的修改。
